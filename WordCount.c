@@ -10,7 +10,7 @@ int count_chars(FILE *fp) {
         count++;
     }
     return count;
-}
+}//字符统计函数
 
 int count_words(FILE *fp) {
     int count = 0;
@@ -30,7 +30,7 @@ int count_words(FILE *fp) {
         count++;
     }
     return count;
-}
+}//单词统计函数
 
 int main(int argc, char *argv[]) {
     char *filename;
@@ -54,10 +54,10 @@ int main(int argc, char *argv[]) {
     }
     if (strcmp(parameter, "-c") == 0) {
         count = count_chars(fp);
-        printf("�ַ�����%d\n", count);
+        printf("×Ö·ûÊý£º%d\n", count);
     } else if (strcmp(parameter, "-w") == 0) {
         count = count_words(fp);
-        printf("��������%d\n", count);
+        printf("µ¥´ÊÊý£º%d\n", count);
     } else {
         fprintf(stderr, "Unknown parameter: %s\n", parameter);
         exit(1);
